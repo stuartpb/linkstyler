@@ -2,10 +2,10 @@
 // @name Green New Tab Links
 // @description Adds a green style rule for links that open in a new tab.
 // @include     *
-// @grant GM_addStyle
-// @version 1.0
+// @grant none
+// @version 1.1
 // ==/UserScript==
 
-/*global GM_addStyle*/
-
-GM_addStyle('a[target="_blank"] {color: green};');
+var s=document.createElement('style');
+s.appendChild(document.createTextNode('a[target="_blank"] {color: green}'));
+document.getElementsByTagName('head')[0].appendChild(s);
